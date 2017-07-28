@@ -1,9 +1,9 @@
 #!/bin/zsh
 # install the plugins and build the static site
-gitbook install && gitbook build
+gitbook install && gitbook init && gitbook build
 
 # checkout to the gh-pages branch
-git checkout --orphan gh-pages
+git checkout gh-pages
 
 # pull the latest updates
 git pull origin gh-pages --rebase
